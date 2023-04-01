@@ -12,7 +12,6 @@ export class PokemonService {
   }
   
   async carregarPokemons() {
-    debugger
     const requisicao = await this.httpClient
       .get<any>('https://pokeapi.co/api/v2/pokemon?limit=151')
       .toPromise();
